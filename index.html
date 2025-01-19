@@ -183,13 +183,19 @@
     </script>
 
     <script>
-        // Ambil parameter 'to' dari URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const guestName = urlParams.get('to');
+        // Fungsi untuk mendapatkan parameter dari URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
 
-        // Tampilkan nama tamu jika parameter 'to' ada di URL
+        // Ambil nama dari parameter `to`
+        const guestName = getQueryParameter('to');
+
+        // Ganti teks "Nama yang diundang" dengan nama dari URL
         if (guestName) {
-            document.getElementById('guestName').textContent = decodeURIComponent(guestName.replace(/\+/g, ' '));
+            const guestElement = document.querySelector('.hero p');
+            guestElement.textContent = guestName.replace(/\+/g, ' '); // Ganti '+' dengan spasi
         }
     </script>
 
