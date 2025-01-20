@@ -44,10 +44,11 @@
             background-size: cover;
             background-position: center;
             text-align: center;
+            padding: 0 10%;
         }
 
         .hero .text-container {
-            background-color: rgba(226, 206, 177, 0.3); /* Transparansi lebih tinggi */
+            background-color: rgba(226, 206, 177, 0.3);
             padding: 30px 50px;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -109,33 +110,6 @@
             transform: scale(1.05);
         }
 
-        /* Wedding Info Section */
-        .wedding-info {
-            background-color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-            display: none;
-        }
-
-        .wedding-info h2 {
-            font-family: 'Tangerine', cursive;
-            font-size: 2.5rem;
-            color: #391e10;
-            margin-bottom: 20px;
-        }
-
-        .wedding-info h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3rem;
-            color: #391e10;
-            margin-bottom: 20px;
-        }
-
-        .wedding-info p {
-            font-size: 1.5rem;
-            color: #444;
-        }
-
         footer {
             background-color: #391e10;
             color: white;
@@ -146,6 +120,41 @@
 
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Responsiveness */
+        @media (min-width: 1024px) {
+            .hero h2 {
+                font-size: 8rem;
+            }
+            .hero p {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .hero h2 {
+                font-size: 6rem;
+            }
+            .hero p {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero .text-container {
+                padding: 20px;
+            }
+            .hero h2 {
+                font-size: 4rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .hero .btn {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
@@ -166,14 +175,6 @@
     <footer>
         <p>© 2025 Destya & Yoyok</p>
     </footer>
-
-    <script>
-        // Menampilkan wedding info setelah tombol diklik
-        document.getElementById('openInvitation').addEventListener('click', function() {
-            document.getElementById('heroSection').style.display = 'none';
-            document.getElementById('weddingInfoSection').style.display = 'block';
-        });
-    </script>
 
     <script>
         // Fungsi untuk mendapatkan parameter dari URL
