@@ -40,30 +40,30 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            background-image: url('https://i.pinimg.com/736x/7a/a7/54/7aa75424a1025499e6d36b2e882aae62.jpg');
+            background-image: url('https://i.pinimg.com/736x/7a/a7/54/7aa75424a1025499e6d36b2e882aae62.jpg'); /* URL diperbarui */
             background-size: cover;
             background-position: center;
             text-align: center;
-            width: 100%;
+            width: 100%; /* memastikan lebar 100% */
         }
 
         .hero .text-container {
-            background-color: rgba(226, 206, 177, 0.3);
-            padding: 40px 60px;
-            border-radius: 20px;
+            background-color: rgba(226, 206, 177, 0.3); /* Transparansi lebih tinggi */
+            padding: 20px 40px; /* menyesuaikan padding untuk perangkat mobile */
+            border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            width: 85%;
-            max-width: 800px;
+            width: 80%; /* memastikan kontainer tidak melebihi lebar */
+            max-width: 600px; /* batas lebar maksimum */
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.5rem; /* ukuran lebih kecil untuk perangkat mobile */
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 15px;
@@ -72,24 +72,23 @@
         
         .hero h2 {
             font-family: 'Tangerine', cursive;
-            font-size: 4rem;
+            font-size: 4rem; /* ukuran lebih kecil untuk perangkat mobile */
             font-weight: bold;
             color: #281700;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
-            white-space: nowrap;
         }
         
         .hero h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 15px;
             color: #fff;
         }
         
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* ukuran lebih kecil untuk perangkat mobile */
             font-weight: bold;
             color: #281700;
             margin-bottom: 20px;
@@ -99,8 +98,8 @@
             background-color: #e2ceb1;
             color: #391e10;
             font-family: 'Tangerine', cursive;
-            font-size: 2rem;
-            padding: 15px 35px;
+            font-size: 1.5rem; /* ukuran lebih kecil untuk perangkat mobile */
+            padding: 10px 25px;
             border-radius: 30px;
             border: none;
             cursor: pointer;
@@ -111,6 +110,33 @@
         .hero .btn:hover {
             background-color: #c0a484;
             transform: scale(1.05);
+        }
+
+        /* Wedding Info Section */
+        .wedding-info {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .wedding-info h2 {
+            font-family: 'Tangerine', cursive;
+            font-size: 2.5rem;
+            color: #391e10;
+            margin-bottom: 20px;
+        }
+
+        .wedding-info h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #391e10;
+            margin-bottom: 20px;
+        }
+
+        .wedding-info p {
+            font-size: 1.5rem;
+            color: #444;
         }
 
         footer {
@@ -127,12 +153,12 @@
 
         @media screen and (max-width: 768px) {
             .hero h2 {
-                font-size: 3rem;
+                font-size: 3rem; /* menyesuaikan ukuran pada layar kecil */
             }
 
             .hero .btn {
-                font-size: 1.5rem;
-                padding: 10px 25px;
+                font-size: 1.2rem;
+                padding: 8px 20px;
             }
         }
     </style>
@@ -156,21 +182,27 @@
     </footer>
 
     <script>
+        // Menampilkan wedding info setelah tombol diklik
         document.getElementById('openInvitation').addEventListener('click', function() {
             document.getElementById('heroSection').style.display = 'none';
+            document.getElementById('weddingInfoSection').style.display = 'block';
         });
     </script>
 
     <script>
+        // Fungsi untuk mendapatkan parameter dari URL
         function getQueryParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
         }
 
+        // Ambil nama dari parameter to
         const guestName = getQueryParameter('to');
+
+        // Ganti teks "Nama yang diundang" dengan nama dari URL
         if (guestName) {
             const guestElement = document.querySelector('.hero p');
-            guestElement.textContent = guestName.replace(/\+/g, ' ');
+            guestElement.textContent = guestName.replace(/\+/g, ' '); // Ganti '+' dengan spasi
         }
     </script>
 
