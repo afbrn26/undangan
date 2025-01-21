@@ -155,6 +155,16 @@
         @media screen and (max-width: 768px) {
             .hero h2 {
                 font-size: 3rem; /* menyesuaikan ukuran pada layar kecil */
+                white-space: pre-line;
+            }
+
+            .hero h2::before {
+                content: "Destya\n&\nYoyok";
+                white-space: pre-line;
+            }
+
+            .hero h2 span {
+                display: none;
             }
 
             .hero .btn {
