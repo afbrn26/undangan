@@ -64,7 +64,7 @@
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem; /* ukuran lebih kecil untuk perangkat mobile */
+            font-size: 1rem; /* ukuran lebih kecil untuk perangkat mobile */
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 15px;
@@ -78,6 +78,7 @@
             color: #281700;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
+            white-space: nowrap; /*Pastikan tidak terpisah*/
         }
         
         .hero h3 {
@@ -99,8 +100,9 @@
             background-color: #e2ceb1;
             color: #391e10;
             font-family: 'Tangerine', cursive;
-            font-size: 1.5rem; /* ukuran lebih kecil untuk perangkat mobile */
-            padding: 10px 25px;
+            font-size: 2rem; /* Memperbesar tombol */
+            font-weight: bold;
+            padding: 15px 40px;
             border-radius: 30px;
             border: none;
             cursor: pointer;
@@ -111,6 +113,11 @@
         .hero .btn:hover {
             background-color: #c0a484;
             transform: scale(1.05);
+        }
+
+        .hero .btn:active {
+            background-color: #a07d5e; /* Ubah warna saat tombol ditekan */
+            transform: scale(0.95);
         }
 
         /* Wedding Info Section */
@@ -158,8 +165,8 @@
             }
 
             .hero .btn {
-                font-size: 1.2rem;
-                padding: 8px 20px;
+                font-size: 1.8rem;
+                padding: 12px 35px;
             }
         }
     </style>
