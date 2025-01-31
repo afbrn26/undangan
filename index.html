@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Undangan Pernikahan</title>
+    <title>Undangan Pernikahan Destya dan Yoyok</title>
     
     <!-- Link Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +23,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, p {
+        h1, h2, p {
             margin: 0;
             padding: 0;
         }
@@ -50,37 +49,39 @@
 
         .hero .text-container {
             background-color: rgba(226, 206, 177, 0.3); /* Transparansi lebih tinggi */
-            padding: 20px 40px; /* menyesuaikan padding untuk perangkat mobile */
-            border-radius: 15px;
+            padding: 15px 30px; /* Menyesuaikan padding agar lebih kecil */
+            border-radius: 10px; /* Mengurangi border-radius agar lebih kecil */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            width: 80%; /* memastikan kontainer tidak melebihi lebar */
-            max-width: 600px; /* batas lebar maksimum */
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem; /* ukuran lebih kecil untuk perangkat mobile */
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            margin-bottom: 15px;
-            color: #fff;
+            width: 70%; /* Menurunkan lebar kontainer */
+            max-width: 500px; /* Menurunkan batas lebar maksimum */
         }
         
-        .hero h2 {
+        .hero h1 {
             font-family: 'Tangerine', cursive;
-            font-size: 4rem; /* ukuran lebih kecil untuk perangkat mobile */
+            font-size: 3rem;
             font-weight: bold;
             color: #281700;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
+            background-image: url(foto.png);
+            background-position: center;
+            background-size: cover; /* Perbaiki ukuran gambar agar menutupi area */
+            height: 65vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-repeat: no-repeat; /* Mencegah gambar diulang */
         }
         
-        .hero h3 {
+        .hero h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -154,12 +155,21 @@
 
         @media screen and (max-width: 768px) {
             .hero h2 {
-                font-size: 3rem; /* menyesuaikan ukuran pada layar kecil */
+                font-size: 2rem; /* menyesuaikan ukuran pada layar kecil */
             }
 
             .hero .btn {
                 font-size: 1.2rem;
                 padding: 8px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem; /* ukuran font lebih kecil untuk perangkat mobile */
+            }
+
+            .hero .text-container {
+                width: 90%; /* Memastikan kontainer lebih lebar di perangkat kecil */
+                padding: 10px 20px;
             }
         }
     </style>
@@ -169,11 +179,8 @@
     <!-- Hero Section -->
     <div class="hero" id="heroSection">
         <div class="text-container">
-            <h1>Walimatul 'Urs</h1>
-            <h2>Destya</h2>
-            <h2>&</h2>
-            <h2>Yoyok</h2>
-            <h3>Kepada Bapak/Ibu/Saudara/i</h3>
+            <h1>Destya<br>&<br>Yoyok</h1>
+            <h2>Kepada Bapak/Ibu/Saudara/i</h2>
             <p>Nama yang diundang</p>
             <button class="btn" id="openInvitation">Buka Undangan</button>
         </div>
